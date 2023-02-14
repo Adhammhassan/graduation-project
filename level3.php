@@ -34,7 +34,7 @@
         <div class="user-input">
 
             <div class="radio-buuton-header">
-                <p class="p2"><b>Level 2</b></p>
+                <p class="p2"><b>Level 3</b></p>
             </div>
             <div class="radio-buuton-header">
                 <p class="p2"><b>Cryptography,Encryption&Key Management</b></p>
@@ -44,15 +44,15 @@
                 <div class="source">
                     <label for="source">Data Encryption</label>
                     <br>
-                    <select name="sourceStation" id="source" required>
+                    <select name="choices" id="source" required>
                     
-                        <optgroup label="Source Stations">
+                        <optgroup label="choices">
                         <?php  
-                         $sourceStationsSQL = "SELECT stations FROM stations";
-                        $result = $conn->query($sourceStationsSQL);
+                         $choicesSQL = "SELECT choices FROM choices where sub_id=1";
+                        $result = $conn->query($choicesSQL);
                         
                         while($row = $result->fetch_assoc()){
-                            echo "<option value = ".$row['stations'].">".$row['stations']."</option>"; 
+                            echo "<option value = ".$row['choices'].">".$row['choices']."</option>"; 
                         }
                             
                         ?>
@@ -64,21 +64,20 @@
                 <div class="destination">
                     <label for="destination">Encryption Algorithm</label>
                     <br>
-                    <select name="destinationStation" id="destination" required >
-                        
-
-                        <optgroup label="Destination Stations">
-                        <?php   
-                        $destinationStationsSQL = "SELECT stations FROM stations";
-                        $result = $conn->query($destinationStationsSQL);
+                    <select name="choices" id="source" required>
+                    
+                        <optgroup label="choices">
+                        <?php  
+                         $choicesSQL = "SELECT choices FROM choices where sub_id=2";
+                        $result = $conn->query($choicesSQL);
                         
                         while($row = $result->fetch_assoc()){
-                            echo "<option value = ".$row['stations'].">".$row['stations']."</option>"; 
+                            echo "<option value = ".$row['choices'].">".$row['choices']."</option>"; 
                         }
-                                
+                            
                         ?>
-                           
-                        
+                            
+                        </optgroup>
                     </select>
                 </div>
                 <div class="destination">
