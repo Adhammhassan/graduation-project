@@ -86,13 +86,13 @@
                     <select name="destinationStation" id="destination" required >
                         
 
-                        <optgroup label="Destination Stations">
+                        <optgroup label="choices">
                         <?php   
-                        $destinationStationsSQL = "SELECT stations FROM stations";
-                        $result = $conn->query($destinationStationsSQL);
+                        $choicesSQL = "SELECT choices FROM choices";
+                        $result = $conn->query($choicesSQL);
                         
                         while($row = $result->fetch_assoc()){
-                            echo "<option value = ".$row['stations'].">".$row['stations']."</option>"; 
+                            echo "<option value = ".$row['choices'].">".$row['choices']."</option>"; 
                         }
                                 
                         ?>

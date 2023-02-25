@@ -37,11 +37,12 @@
             <div class="sourceStation-and-destinationStaion">
 
                 <div class="source">
-                    <label for="source">Cryptography,Encryption&Key Management</label>
+                    <label type="radio" for="source">Cryptography,Encryption&Key Management</label>
                     <br>
                     <select name="sourceStation" id="source" required>
                     
-                        <optgroup label="Source Stations">
+                        <optgroup  label="Source Stations">
+                       
                         <?php  
                          $sourceStationsSQL = "SELECT stations FROM stations";
                         $result = $conn->query($sourceStationsSQL);
