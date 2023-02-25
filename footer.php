@@ -27,7 +27,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="cu.php">Contact Us </a></li>
                     <li><a href="Signup.php">Register</a></li>
-                    <li><a href="book-a-ticket.php"> Ticket booking</a></li>
+                    
                     
                 </ul>
                 
@@ -36,7 +36,7 @@
 <li>  
     <h2>About us</h2>
     <ul class="box">
-      <p>Train ticket system goal is to make our customer comfortable  so customers can book their tickets online without any inflexibility. </p>
+      <p>Our goal is to help customers to find the best Cloud service providers that matches their security features  </p>
     </ul>
     </li>
     

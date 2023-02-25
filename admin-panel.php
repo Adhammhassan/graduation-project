@@ -27,8 +27,7 @@
 
 <body>
   <div class="sidenav">
-    <a href="train-stations.php">Train Stations</a>
-    <a href="all-tickets.php">All Tickets</a>
+    <a href="CSP.php">cloud providers</a>
   </div>
 
   <div class="body2">
@@ -47,19 +46,7 @@ echo $data['total'];?></span> Users</h4>
         </div>
       </div>
       
-      <div class="square3">
-        <div class="text3">
-          <p>Tickets Booked:-</p>
-          <h4 name="totalNumberOfTicketBooked" class="heading4"><span><?php $sql = "SELECT COUNT(*) AS total from tickets";
-$result = $conn->query($sql);
-$data =  $result->fetch_assoc();
-echo $data['total'];?></span> Tickets</h4>
-        </div>
-      </div>
-      <div class="add-credits-button">
-          <a id="addCreditsButton" href = 'add-credits.php'> Add Credits to User</a>
-        </div>
-    </div>
+      
 
   
 
@@ -74,7 +61,6 @@ echo $data['total'];?></span> Tickets</h4>
             <th>First Name</th>
             <th>Email</th>
             <th>Phone Number</th>
-            <th>Wallet balance</th>
           </tr>
         </thead>
 
@@ -93,7 +79,6 @@ while($row=mysqli_fetch_assoc($result))
     <td><?php echo $row['user_name'] ?></td>
     <td><?php echo $row['user_email'] ?></td>
     <td><?php echo $row['user_phone'] ?></td>
-    <td><?php echo $row['user_balance'];?></td>
   </tr>
 
 </tbody>

@@ -37,8 +37,30 @@
                 <p class="p2"><b>Level 3</b></p>
             </div>
             <div class="radio-buuton-header">
-                <p class="p2"><b>Cryptography,Encryption&Key Management</b></p>
+                <p class="p2"><b>  Cryptography,Encryption&Key Management</b></p>
             </div>
+            <div class="sourceStation-and-destinationStaion">
+
+                <div class="source">
+                    <label for="source"> Do you want data to be encrypted at rest?
+</label>
+                    <br>
+                    <select name="choices" id="source" required>
+                    
+                        <optgroup label="choices">
+                        <?php  
+                         $choicesSQL = "SELECT choices FROM choices where sub_id=1";
+                        $result = $conn->query($choicesSQL);
+                        
+                        while($row = $result->fetch_assoc()){
+                            echo "<option value = ".$row['choices'].">".$row['choices']."</option>"; 
+                        }
+                            
+                        ?>
+                            
+                        </optgroup>
+                    </select>
+                </div>
             <div class="sourceStation-and-destinationStaion">
 
                 <div class="source">
