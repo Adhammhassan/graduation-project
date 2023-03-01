@@ -29,7 +29,7 @@
     
       
       
-      <h1>EASY WITH US TO FIND YOUR <span> CLOUD COMPUTING</span></h1>
+      <h1>EASY WITH US TO FIND YOUR <span> CLOUD PROVIDER</span></h1>
       <a href="Signup.php">BECOME A MEMBER</a>
     </div>
   </div>
@@ -57,7 +57,7 @@
           </div>
           <div class="class">
             <i class="fa fa-train" style="font-size:48px;color:rgb(60, 28, 238)"></i>
-            <h1"shvsuyvsuysss"> sysbvsyuvsys</h1>
+            
             <a href="level3.php">level 3</a>
           </div>
           
@@ -72,7 +72,7 @@
             gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut,
             accumsan diam.
           </p>
-          <a href="book-a-ticket.php">VIEW SCHEDULE</a>
+          
         </div>
       </div>
     </div>

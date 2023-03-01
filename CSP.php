@@ -32,13 +32,12 @@
 <body>
     <div class="sidenav">
         <a href="admin-panel.php">Dash Board</a>
-        <a href="all-tickets.php">All Tickets</a>
     </div>
 
     <div class="body2">
 
         <div class="title">
-            <p> <b>Train Stations</b></p>
+            <p> <b>Cloud service providers</b></p>
         </div>
 
         <div class="users-table">
@@ -46,8 +45,8 @@
                 <thead>
                     <tr>
                         
-                        <th  class="special-head">Station #ID</th>  
-                        <th >Stations</th>
+                        <th  class="special-head"> #ID</th>  
+                        <th >Providers</th>
                         
                     </tr>
                 </thead>
@@ -56,27 +55,29 @@
 
 if(isset($_POST['submit'])){
 
-$station = $_POST['station-name'];
-$sql = "INSERT INTO stations (stations) VALUES ('$station')";
+$cloud_providers = $_POST['name'];
+
+$sql = "INSERT INTO cloud_providers (name) VALUES ('$cloud_providers')";
+
 $query = mysqli_query($conn,$sql);
 }
 
 ?>
                 <?php  
                          
-                         $sql = 'SELECT * FROM stations ';
+                         $sql = 'SELECT * FROM cloud_providers ';
                          $result= mysqli_query($conn,$sql);
                          while ($row= mysqli_fetch_assoc($result)){
                          ?>
                                          <tbody>
 
                                                 <tr class="grey-tr">
-                                                 <td>#<?php echo  $row['station_id'];?>
-                                                 <td><?php echo $row['stations']; ?>
-                                                <form action = 'deleteStation.php?action=remove&id=<?php echo $row['station_id'];?>' method = 'POST'>
+                                                 <td>#<?php echo  $row['id'];?>
+                                                 <td><?php echo $row['name']; ?>
+                                                <form action = 'deleteStation.php?action=remove&id=<?php echo $row['id'];?>' method = 'POST'>
                                                     <input id="delete-station-button" type = 'submit' name = 'delete' value = 'Delete' >
                                                     <div class="button-to-edit-station">
-                                                        <a id="edit-station-button" href = 'edit-station.php?action=edit&id=<?php echo $row['station_id'];?>'>Edit Station</a>
+                                                        <a id="edit-station-button" href = 'edit-station.php?action=edit&id=<?php echo $row['id'];?>'>Edit Station</a>
                                                     </div>
 
                                                    </td>
@@ -96,7 +97,7 @@ $query = mysqli_query($conn,$sql);
         <div class="centering">
 
         <div class="button-to-add-station">
-            <button id="add-station-button" onclick="openForm()">Add Station</button>
+            <button id="add-station-button" onclick="openForm()">Add CSP</button>
         </div>
 <!-- 
         <div class="button-to-delete-station">
@@ -108,10 +109,10 @@ $query = mysqli_query($conn,$sql);
 
         <div class="form-popup" id="myForm">
             <form method="POST" class="form-container">
-                <h1>Add station</h1>
-                <label for="station-name"><b>Station name</b></label>
-                <input id="station-name" type="text" placeholder="Ex: 3abssya Station" name="station-name" >
-
+                <h1>Add your cloud service provider</h1>
+               
+                <input id="name" type="text" placeholder="Cloud provider" name="name" >
+                
                 <button name ="submit" type="submit" class="btn">Save</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
             </form>

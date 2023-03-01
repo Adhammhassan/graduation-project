@@ -1,9 +1,9 @@
 <?php 
 require_once 'database/dbConnection.php';
 
-$selectedStationID = $_GET['id'];
+$selectedID = $_GET['id'];
 
-$sqlDeleteStation = "DELETE FROM stations WHERE station_id = '$selectedStationID' ";
+$sqlDeleteStation = "DELETE FROM cloud_providers WHERE id = '$selectedID' ";
 
 $result = mysqli_query($conn, $sqlDeleteStation);
 
