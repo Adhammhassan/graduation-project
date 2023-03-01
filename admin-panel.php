@@ -28,6 +28,7 @@
 <body>
   <div class="sidenav">
     <a href="CSP.php">cloud providers</a>
+    <a href="control.php">conrtol</a>
   </div>
 
   <div class="body2">

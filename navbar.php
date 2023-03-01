@@ -59,7 +59,13 @@ require_once './database/dbConnection.php';
         <li> <a href="profile.php">My Profile</li></a>
         <li><a href="cu.php">Contact us</a></li>
       <li> <a href="logout.php">Logout</li></a>
-      <?php endif;?>
+      <?php endif;
+      if ($_SESSION['user_type'] == 'admin') {
+        echo '';
+      
+    }
+      ?>
+      <li><a href="admin-panel.php">Admin panel</a></li>
 
 
 

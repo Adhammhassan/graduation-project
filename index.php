@@ -47,18 +47,19 @@
       <div class="content">
         <div class="classes-sec">
           <div class="class activ">
-            <i class="fa fa-train" style="font-size:48px;color:rgb(60, 28, 238)"></i>
-            <a href="level1.php">level 1</a>
+            
+            <a href="level1.php">Beginner</a>
              
           </div>
+
           <div class="class">
-            <i  style="font-size:48px;color:rgb(60, 28, 238)"></i>
-            <a href="level2.php">level 2</a>
+            
+            <a href="level2.php">Intermediate</a>
           </div>
           <div class="class">
-            <i class="fa fa-train" style="font-size:48px;color:rgb(60, 28, 238)"></i>
             
-            <a href="level3.php">level 3</a>
+            
+            <a href="level3.php">Expert</a>
           </div>
           
          </div>
