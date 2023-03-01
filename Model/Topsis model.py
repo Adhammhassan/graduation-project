@@ -9,7 +9,6 @@ sg.theme('DarkBlue2')
 # Define the decision problem and criteria weights
 decision_problem = 'Selecting the best cloud provider for a brokerage system'
 criteria = pd.DataFrame({'Criteria': ['Pricing', 'Performance', 'Reliability', 'Security', 'Ease of use'],
-                         'Weight': [0.25, 0.20, 0.20, 0.20, 0.15],
                          'User weight': [0.0, 0.0, 0.0, 0.0, 0.0]})
 
 # Get the user's criteria weights
