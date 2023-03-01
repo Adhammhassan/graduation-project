@@ -9,13 +9,12 @@ sg.theme('DarkBlue2')
 # Define the decision problem and criteria weights
 decision_problem = 'Selecting the best cloud provider for a brokerage system'
 criteria = pd.DataFrame({'Criteria': ['Pricing', 'Performance', 'Reliability', 'Security', 'Ease of use'],
-                         'Weight': [0.25, 0.20, 0.20, 0.20, 0.15],
                          'User weight': [0.0, 0.0, 0.0, 0.0, 0.0]})
 
 # Get the user's criteria weights
 layout = []
 for i in range(len(criteria)):
-    layout.append([sg.Text(criteria.loc[i, 'Criteria']), sg.Slider(range=(0, 100), orientation='h', size=(20, 10), default_value=0, key=f'criteria{i}')])
+    layout.append([sg.Text(criteria.loc[i, 'Criteria']), sg.Slider(range=(0, 100), orientation='h', size=(30, 10), default_value=0, key=f'criteria{i}')])
 layout.append([sg.Button('Submit')])
 
 window = sg.Window('CAB Model', layout)
@@ -38,7 +37,7 @@ alternatives = pd.DataFrame({
     'Performance': [4.5,4.4,4.3,4.6,4.3,4.1,4.6,4.6,4.5,4.6,4.4,4.3,4.4,4.3,4.1,4.6,4.4,4.2,4.0,4.2],
     'Reliability': [4.7,4.6,4.5,4.4,4.4,4.3,4.7,4.7,4.6,4.6,4.5,4.4,4.4,4.4,4.5,4.7,4.5,4.2,4.1,4.1],
     'Security': [4.8,4.6,4.5,4.7,4.6,4.3,4.7,4.8,4.6,4.7,4.5,4.4,4.4,4.4,4.4,4.8,4.4,4.2,4.1,4.2],
-    'Ease of use': [4.2,4.4,4.3,4.2,4.2,4.1,4.6,4.5,4.6,4.5,4.4,4.3,4.3,4.3,4.6,4.5,4.2,4.1,4.0,4.4,]})
+    'Ease of use': [4.2,4.4,4.3,4.2,4.2,4.1,4.6,4.5,4.6,4.5,4.4,4.3,4.3,4.3,4.6,4.5,4.2,4.1,4.0,4.4]})
 
 
 # Perform the MCDM analysis
