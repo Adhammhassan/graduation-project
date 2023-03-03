@@ -100,11 +100,11 @@ class Application(Frame):
         self.weight13.grid(row=12, column=1, padx=5, pady=5)
          # Create a button to calculate the rankings
         self.button = ttk.Button(self, text="Calculate rankings", command=self.calculate_rankings)
-        self.button.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
+        self.button.grid(row=14, column=0, columnspan=2, padx=5, pady=5)
 
         # Create a label to display the rankings
         self.result_label = ttk.Label(self, text="")
-        self.result_label.grid(row=4, column=0, columnspan=2, padx=5, pady=5)
+        self.result_label.grid(row=15, column=0, columnspan=2, padx=5, pady=5)
     def calculate_rankings(self):
         # Get the criteria weights from the entry widgets
         weight1 = float(self.weight1.get())
