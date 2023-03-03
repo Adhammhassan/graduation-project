@@ -7,8 +7,7 @@ criteria = ['Data Encryption', 'Encryption Algorithm', 'Key size', 'Key Generati
             'Data Inventory', 'Data Classification', 'Sensitive Data Transfer', 'Data Retention and Deletion',
             'Sensitive Data Protection', 'Infrastructure and Virtualization Security Policy and Procedures',
             'Network Security', 'Network Defense']
-alternatives = ['AWS', 'Alibaba', 'IBM', 'BlackKite', 'OVH', 'Azure', 'Google Cloud', 'Blackbaud', 'VMware',
-                'Pega Cloud']
+alternatives = ["AWS", "Alibaba", "IBM", "Azure", "OVH", "Google Cloud", "Pega Cloud", "Salesforce", "DigitalOcean", "Appian"]
 
 # Define the performance matrix for the alternatives and criteria
 performance_matrix = np.array([[0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
@@ -107,19 +106,19 @@ class Application(Frame):
         self.result_label.grid(row=15, column=0, columnspan=2, padx=5, pady=5)
     def calculate_rankings(self):
         # Get the criteria weights from the entry widgets
-        weight1 = float(self.weight1.get())
-        weight2 = float(self.weight2.get())
-        weight3 = float(self.weight3.get())
-        weight4 = float(self.weight4.get())
-        weight5 = float(self.weight5.get())
-        weight6 = float(self.weight6.get())
-        weight7 = float(self.weight7.get())
-        weight8 = float(self.weight8.get())
-        weight9 = float(self.weight9.get())
-        weight10 = float(self.weight10.get())
-        weight11 = float(self.weight11.get())
-        weight12 = float(self.weight12.get())
-        weight13 = float(self.weight13.get())
+        weight1 = float(self.weight1.get())/100
+        weight2 = float(self.weight2.get())/100
+        weight3 = float(self.weight3.get())/100
+        weight4 = float(self.weight4.get())/100
+        weight5 = float(self.weight5.get())/100
+        weight6 = float(self.weight6.get())/100
+        weight7 = float(self.weight7.get())/100
+        weight8 = float(self.weight8.get())/100
+        weight9 = float(self.weight9.get())/100
+        weight10 = float(self.weight10.get())/100
+        weight11 = float(self.weight11.get())/100
+        weight12 = float(self.weight12.get())/100
+        weight13 = float(self.weight13.get())/100
         criteria_weights = np.array([weight1, weight2, weight3, weight4, weight5, weight6, weight7, weight8, weight9, weight10, weight11, weight12, weight13])
 
         # Calculate the weighted performance matrix
