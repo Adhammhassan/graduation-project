@@ -1,0 +1,42 @@
+label{
+    margin-left: 30px;
+}
+input{
+    margin-left: 30px;
+}
+.card .card-header {
+    font-weight: 500px;
+}
+
+.log{
+    width: 100px;
+    height: 30px;
+    background: #ea0101;
+    margin-left: 20px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+
+}
+.update{
+    width: 100px;
+    height: 30px;
+    background: blue;
+    margin-left: 20px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+
+}
+
+a{
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 14px;
+    color: black;
+}
+h3{
+    margin-left: 700px;
+}
